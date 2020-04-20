@@ -1,12 +1,12 @@
 html {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: black;
+  background-color: #000000;
   color: white; }
-
-body {
-  margin: 0; }
-
-body #layout-main {
-  height: 100%;
-  color: #ffac41;
-  margin: 10px; }
+  html body {
+    margin: 0; }
+  html body #layout-main {
+    height: 100%;
+    color: cyan;
+    margin: 10px; }
+    html body #layout-main li {
+      list-style-type: none; }
