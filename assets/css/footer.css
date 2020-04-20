@@ -1,0 +1,7 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #202020;
+  height: fit-content;
+  padding-left: 20px;
+  font-size: 20px; }
