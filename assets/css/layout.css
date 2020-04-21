@@ -2,10 +2,17 @@ html {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: #000000;
   color: white; }
+  html ::-webkit-scrollbar {
+    display: none; }
+  html input, html textarea {
+    background-color: dimgrey;
+    color: gold; }
   html body {
     margin: 0; }
   html body #layout-main {
     color: cyan;
-    margin: 10px; }
+    margin: 10px;
+    height: 100%;
+    overflow: scroll; }
     html body #layout-main li {
       list-style-type: none; }

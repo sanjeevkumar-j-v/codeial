@@ -11,13 +11,26 @@ module.exports.create = function(req, res){
                 user: req.user._id
             }, function(err, comment){
                 // handle error
-
                 post.comments.push(comment);
                 post.save();
 
                 res.redirect('/');
             });
         }
+    });
+}
 
+module.exports.destroy = function(req, res){
+
+
+    Comment.findById(req.params.id, function(err, comment){
+        // .id means converting the object id into string
+        // if(comment.user == req.user.id){
+        if(comment){
+            comment.remove();
+            return res.redirect('back');
+        }else{
+            return res.redirect('back');
+        }
     });
 }

@@ -2,6 +2,13 @@ html {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #000000;
     color: white;
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    input, textarea {
+        background-color: dimgrey;
+        color: gold;
+    }
     body {
         margin: 0;}
     body #layout-main {
@@ -10,6 +17,8 @@ html {
         // color: #ffac41;
         color: cyan;
         margin: 10px;
+        height: 100%;
+        overflow: scroll;
         li {
             list-style-type: none;
         }
