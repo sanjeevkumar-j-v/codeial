@@ -27,8 +27,15 @@ module.exports.destroy = function(req, res){
         // .id means converting the object id into string
         // if(comment.user == req.user.id){
         if(comment){
+
+            let postId = comment.post;
+
             comment.remove();
-            return res.redirect('back');
+
+            Post.findByIdAndUpdate(postId, { $pull: {comments: req.params.id}}, function(err, post){
+                return res.redirect('back');
+            })
+            
         }else{
             return res.redirect('back');
         }
