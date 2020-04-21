@@ -13,11 +13,19 @@ module.exports.home = function(req, res){
     //     });
     // });
 
-    Post.find({}).populate('user').exec(function(err, post){
+    Post.find({})
+    .populate('user')
+    .populate({
+        path: 'comments',
+        populate: {
+            path: 'user'
+        }
+    })
+    .exec(function(err, posts){
         // when tasks are succesfully fetched from db render them to home page
         return res.render('home',{
             title: "Home",
-            posts: post
+            posts: posts
         });
     })
 }

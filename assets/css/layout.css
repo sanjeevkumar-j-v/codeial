@@ -5,7 +5,6 @@ html {
   html body {
     margin: 0; }
   html body #layout-main {
-    height: 100%;
     color: cyan;
     margin: 10px; }
     html body #layout-main li {
