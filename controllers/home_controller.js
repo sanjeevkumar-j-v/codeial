@@ -1,4 +1,5 @@
 const Post = require('../models/post')
+const User = require('../models/user')
 
 module.exports.home = function(req, res){
     // return res.end('<h1>Express is up for Codeial!</h1>')
@@ -23,10 +24,14 @@ module.exports.home = function(req, res){
     })
     .exec(function(err, posts){
         // when tasks are succesfully fetched from db render them to home page
-        return res.render('home',{
-            title: "Home",
-            posts: posts
-        });
+        User.find({}, function(err, users){
+            return res.render('home',{
+                title: "Home",
+                posts: posts,
+                all_users: users
+            });
+        })
+        
     })
 }
 // module.exports.viewPost = function(req, res){
