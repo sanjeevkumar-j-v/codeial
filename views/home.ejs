@@ -12,15 +12,17 @@
         </form>
     </section>
     <%}%>
-    <%if(locals.user){ %>
-    <ul class="posts">
+    <!-- <%if(locals.user){ %> -->
+    <div id="posts-list-container">
+    <ul >
         <% for (post of posts) {%>
         
             <%- include('_post') %>
     
         <%}%>
     </ul>
-    <%}%>
+    </div>
+    <!-- <%}%> -->
     </section>
     
     <section id="user-friends">
