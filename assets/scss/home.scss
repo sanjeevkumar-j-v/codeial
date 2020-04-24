@@ -1,8 +1,10 @@
 #home-container {
+    margin: 10px;
     display: flex;
-
+    justify-content: space-around;
     #feed-posts {
         width: 70%;
+        font-size: 25px;
     }
 
     #user-friends {

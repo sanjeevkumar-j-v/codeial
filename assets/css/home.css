@@ -1,7 +1,10 @@
 #home-container {
-  display: flex; }
+  margin: 10px;
+  display: flex;
+  justify-content: space-around; }
   #home-container #feed-posts {
-    width: 70%; }
+    width: 70%;
+    font-size: 25px; }
   #home-container #user-friends {
     width: 30%;
     padding: 10px;

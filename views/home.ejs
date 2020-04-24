@@ -6,8 +6,8 @@
     <%if(locals.user){ %>
     <section id="feed-posts">
         <h4>Posts</h4>
-        <form action="/posts/create" id="new-post-form" method="POST">
-            <textarea name="content" cols="30" rows="3" placeholder="write something here..." required></textarea>
+        <form action="/posts/create" id="new-post-form"  method="POST">
+            <textarea name="content" tabindex="-1" cols="30" rows="3" placeholder="write something here..." required></textarea>
             <input type="text" name="name" value="<% locals.user %>" hidden>
             <input type="submit" value="Post">
         </form>

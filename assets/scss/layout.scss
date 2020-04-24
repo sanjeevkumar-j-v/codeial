@@ -1,13 +1,19 @@
 html {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #000000;
-    color: white;
+    background-color: #02020a;
+    color: #e5e5e5;
     ::-webkit-scrollbar{
         display: none;
     }
     input, textarea {
-        background-color: dimgrey;
-        color: gold;
+        background-color: #30292f;
+        color: #fca311;
+        border-radius: 10px;
+        padding: 10px;
+        border: none;
+    }
+    textarea:focus {
+        -webkit-textfield-decoration-container: unquote($string: "")
     }
     body {
         margin: 0;}
@@ -15,7 +21,7 @@ html {
         // height: 100%; 
         // text-align: center;
         // color: #ffac41;
-        color: cyan;
+        color: #0094c6;
         margin: 10px;
         height: 100%;
         overflow: scroll;

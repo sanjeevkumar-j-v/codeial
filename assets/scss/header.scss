@@ -2,15 +2,17 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #202020;
+    // background-color: #000000;
     height: 70px;
     font-size: 20px;
-    
+    border-bottom: 2px solid cyan;
     span {
         font-family: monospace;
         margin-left: 15px;
         align-content: center;
-        font-size: 25px;
+        font-size: 35px;
+        font-weight: bolder;
+        color: #f8f32b;
         a {
             text-decoration: none;
             color: inherit;}
@@ -36,7 +38,8 @@ header{
                 font-size: 18px;
                 color: inherit;
                 border-radius: 5px;
-                background-color: #ff1e56;
+                background-color: #e01a4f;
+                border: none;
             }
     }
 }
