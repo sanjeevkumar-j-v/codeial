@@ -38,7 +38,7 @@
                     </p>
                     <div class="post-comments">
           
-                            <form action="/comments/create" method="POST">
+                            <form id="post-${ post._id }-comments-form" action="/comments/create" method="POST">
                                 <input type="text" name="content" placeholder="Type a comment here..." required>
                                 <input type="hidden" name="post" value="${ post._id }" >
                                 <input type="submit" value="Add comment">
@@ -64,6 +64,14 @@
                 url: $(deleteLink).prop('href'),
                 success: function(data){
                     $(`#post-${ data.data.post_id}`).remove();
+                    new Noty({
+                        theme: 'relax',
+                        text: "Post Deleted",
+                        type: 'success',
+                        layout: 'topRight',
+                        timeout: 1500
+                        
+                    }).show();
                 },error: function(error){
                     console.log(error.responseText);
                 }
@@ -71,5 +79,21 @@
         });
     }
 
+    let convertPostsToAjax = function(){
+        $('#posts-list-container>ul>li').each(function(){
+            let self = $(this);
+            let deleteButton = $(' .delete-post-button', self);
+            deletePost(deleteButton);
+
+            // get the post's id by splitting the id attribute
+            let postId = self.prop('id').split("-")[1]
+            new PostComments(postId);
+        });
+    }
+
+
+
+
     createPost();
+    convertPostsToAjax();
 }
